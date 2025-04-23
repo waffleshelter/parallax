@@ -1,0 +1,185 @@
+/* poppins-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/poppins-v22-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* poppins-500 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/poppins-v22-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* poppins-600 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/poppins-v22-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --white: #fff;
+    --aqua: #12f7ff;
+    --violet: #1d002c;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--violet);
+    color: var(--white);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    position: absolute;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    padding: 25px 10%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    font-size: 2em;
+    font-weight: 600;
+    color: var(--white);
+}
+
+.header__menu {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+
+.header__menu a {
+    font-size: 1em;
+    font-weight: 500;
+    color: var(--white);
+    padding: 5px 12px;
+    border-radius: 25px;
+    border: 2px solid var(--aqua);
+    transition: all 0.3s ease;
+}
+
+.header__menu a:hover {
+    color: var(--violet);
+    background: var(--aqua);
+    box-shadow: 0 0 1rem var(--aqua);
+}
+
+section {
+    min-height: 100vh;
+}
+
+.home {
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    z-index: 99;
+}
+
+.home img {
+    position: absolute;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+#text {
+    position: absolute;
+    font-size: 2.5rem;
+    text-shadow: 10px 5px 4px rgba(0, 0, 0, 0.85);
+    left: 3%;
+    top: 80%;
+}
+
+#moon,
+#desert-moon {
+    mix-blend-mode: screen;
+}
+
+.about {
+    position:relative;
+    height: 100vh;
+}
+
+.info-box {
+    position: absolute;
+    /* object-fit: cover;
+    pointer-events: none; */
+    z-index: 1003;
+    top: 5%;
+    left: 10%;
+    width: 50%;
+    background: var(--violet);
+}
+
+.info-box h2 {
+    font-size: 2.3rem;
+}
+
+.info-box p {
+    margin: 0.5rem 0 1.5rem 0;
+}
+
+.btn {
+    background: var(--aqua);
+    color: var(--violet);
+    border-radius: 25px;
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--aqua);
+    font-weight: 500;
+    display: inline-block;
+    margin-top: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    box-shadow: 0 0 1rem var(--aqua);
+    background: var(--violet);
+    color: var(--white);
+}
+
+.about img {
+    position: absolute;
+    z-index: 1000;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+#waterfall {
+    position: absolute;
+    top: -95px;
+}
+
+.products {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+}
