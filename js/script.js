@@ -12,3 +12,22 @@ window.addEventListener('scroll', () => {
     man.style.left = value * 0.8 + 'px';
     desertMoon.style.top = value * 0.5 + 'px';
 })
+
+let contact = document.getElementById("contactAnimation")
+let container = document.getElementById("container")
+let form = document.getElementById("form")
+let questions = document.getElementById("questions")
+
+contact.onclick = function() {
+    let start = Date.now();
+    let timer = setInterval(function() {
+        let timePassed = Date.now() - start;
+        form.style.display = "flex";
+        container.style.border = "2px solid var(--aqua)";
+        container.style.opacity = timePassed / 2000;
+        form.style.opacity = timePassed / 2000;
+        contact.style.pointerEvents = "none";
+      if (timePassed > 2000) clearInterval(timer);
+
+    }, 20);
+  }

@@ -272,21 +272,26 @@ section {
     border: 2px solid var(--aqua);
     border-radius: 10px;
     display: flex;
+    flex-direction: column;
+    gap: 15px;
     justify-content: center;
     align-items: center;
+    /* animation: formOn 3s forwards ease; */
 }
 
 
 
 form {
+    display: none;
     width: 50%;
-    display: flex;
+    transition: all 2s;
     flex-direction: column;
     gap: 15px;
 }
 
-form h2 {
-    color: var(--aqua);;
+.contacts h2 {
+    color: var(--aqua);
+    cursor: pointer;
 }
 
 form a {
