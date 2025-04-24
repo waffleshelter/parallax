@@ -180,6 +180,11 @@ section {
     /* top: -95px; */
 }
 
+#grass {
+    position: absolute;
+    top: -100px;
+}
+
 .products {
     z-index: 1001;
     width: 100%;
@@ -188,7 +193,7 @@ section {
     justify-content: center;
     position: relative;
     align-items: center;
-    background: linear-gradient(hsl(234.29deg 58.33% 14.12%) 90%, var(--violet)  95%);
+    background: linear-gradient(hsl(234.29deg 58.33% 14.12%) 80%, var(--violet)  100%);
 }
 
 .products__item {
@@ -219,6 +224,7 @@ section {
     transform: translate(-50%, -50%);
     width: 10rem;
     aspect-ratio: 1 / 1;
+    filter: drop-shadow(0 0 10px var(--aqua));
     text-shadow: 0 0 1rem var(--aqua);   
 }
 
@@ -276,6 +282,7 @@ section {
     gap: 15px;
     justify-content: center;
     align-items: center;
+    transition: all 2s;
     /* animation: formOn 3s forwards ease; */
 }
 
@@ -292,6 +299,7 @@ form {
 .contacts h2 {
     color: var(--aqua);
     cursor: pointer;
+    animation: glow 1s infinite;
 }
 
 form a {
@@ -309,4 +317,14 @@ input {
 input::placeholder {
     color: var(--aqua);;
     opacity: 0.3;
+}
+
+@keyframes glow {
+    0%, 100% {
+        filter: drop-shadow(0 0 20px var(--aqua))
+    }
+
+    50% {
+        filter: drop-shadow(0 0 15px var(--aqua))
+    }
 }

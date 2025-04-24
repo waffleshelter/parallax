@@ -24,10 +24,10 @@ contact.onclick = function() {
         let timePassed = Date.now() - start;
         form.style.display = "flex";
         container.style.border = "2px solid var(--aqua)";
-        container.style.opacity = timePassed / 2000;
-        form.style.opacity = timePassed / 2000;
+        container.style.opacity = timePassed / 1000;
+        form.style.opacity = timePassed / 1000;
         contact.style.pointerEvents = "none";
-      if (timePassed > 2000) clearInterval(timer);
-
+        contact.style.animation = "none";
+      if (timePassed > 1000) clearInterval(timer);
     }, 20);
   }
